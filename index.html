@@ -1,24 +1,316 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Frozen Feature Augmentation</title>
+  <link rel="icon" type="image/x-icon" href="static/images/snow_flake.svg">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
 </head>
 <body>
-<div class="bgimg">
- <!--
-  <div class="topleft">
-    <p>Logo</p>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Frozen Feature Augmentation <br> for Few-Shot Image Classification </h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://andrbaer.github.io/" target="_blank">Andreas Bär</a><sup>1&nbsp;2&nbsp;*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://neilhoulsby.github.io/" target="_blank">Neil Houlsby</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.mostafadehghani.com/" target="_blank">Mostafa Dehghani</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://mechcoder.github.io/" target="_blank">Manoj Kumar</a><sup>1&nbsp;†</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Google DeepMind&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <span class="author-block"><sup>2</sup>Technische Universität Braunschweig</span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Andreas did the work during an internship at Google DeepMind.&nbsp;&nbsp;&nbsp;&nbsp;<sup>†</sup>Manoj lead the project.</small></span>
+              <span class="eql-cntrb"><small></small></span>
+            </div>
+
+            <div class="title is-4 publication-title">
+            <br>
+            IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2024
+            <br>
+            </div>
+
+                  <div class="column has-text-centered">
+<!--                    <div class="publication-links">-->
+<!--                         &lt;!&ndash; Arxiv PDF link &ndash;&gt;-->
+<!--                      <span class="link-block">-->
+<!--                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"-->
+<!--                        class="external-link button is-normal is-rounded is-dark">-->
+<!--                        <span class="icon">-->
+<!--                          <i class="fas fa-file-pdf"></i>-->
+<!--                        </span>-->
+<!--                        <span>Paper</span>-->
+<!--                      </a>-->
+<!--                    </span>-->
+
+<!--                    &lt;!&ndash; Supplementary PDF link &ndash;&gt;-->
+<!--                    <span class="link-block">-->
+<!--                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"-->
+<!--                      class="external-link button is-normal is-rounded is-dark">-->
+<!--                      <span class="icon">-->
+<!--                        <i class="fas fa-file-pdf"></i>-->
+<!--                      </span>-->
+<!--                      <span>Supplementary</span>-->
+<!--                    </a>-->
+<!--                  </span>-->
+
+<!--                  &lt;!&ndash; Github link &ndash;&gt;-->
+<!--                  <span class="link-block">-->
+<!--                    <a href="https://github.com/YOUR REPO HERE" target="_blank"-->
+<!--                    class="external-link button is-normal is-rounded is-dark">-->
+<!--                    <span class="icon">-->
+<!--                      <i class="fab fa-github"></i>-->
+<!--                    </span>-->
+<!--                    <span>Code</span>-->
+<!--                  </a>-->
+<!--                </span>-->
+
+<!--                 ArXiv abstract Link-->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2403.10519" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+                    <div class="is-size-5 publication-authors"
+              <span class="eql-cntrb"><small></small></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-   -->
-  <div class="middle">
-    <h1>Frozen Feature Augmentation<br>for Few-Shot Image Classification</h1>
-    <p>by <a href="https://andrbaer.github.io/" target="_blank">Andreas Bär</a>, <a href="https://neilhoulsby.github.io/" target="_blank">Neil Houlsby</a>, <a href="https://www.mostafadehghani.com/" target="_blank">Mostafa Dehghani</a>, and <a href="https://mechcoder.github.io/" target="_blank">Manoj Kumar</a></p>
-    <p>Accepted to CVPR 2024.<br>More details coming soon.</p>
+</section>
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Training a linear classifier or lightweight model on top of pretrained vision model outputs, so-called 'frozen features', leads to impressive performance on a number of downstream few-shot tasks. Currently, frozen features are not modified during training. On the other hand, when networks are trained directly on images, data augmentation is a standard recipe that improves performance with no substantial overhead. In this paper, we conduct an <b>extensive pilot study</b> on <b>few-shot image classification</b> that explores applying <b>data augmentations in the frozen feature space</b>, dubbed <b>'frozen feature augmentation (FroFA)'</b>, covering <b>twenty augmentations</b> in total. Our study demonstrates that adopting a deceptively <b>simple point-wise FroFAs</b>, such as brightness, can <b>improve few-shot performance</b> consistently across <b>three network architectures</b>, <b>three large pretraining datasets</b>, and <b>eight transfer datasets</b>.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="bottomleft" style="font-size: 20px;">
-    <p>&#169 Image from <a href="https://unsplash.com/de/fotos/gewasser-JJ0xHzObbmg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> taken by <a href="https://unsplash.com/de/@eadesstudio?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">James Eades</a>.
-  </p>
-  </div>
+</section>
+<!-- End paper abstract -->
+
+    <!-- Method overview carousel -->
+<section class="section hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3" style="text-align:center">Method Overview</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/overview_step1.png" class="center" width="70%">
+        <h2 class="subtitle has-text-centered">
+          Given a (frozen) pretrained vision transformer, with <i>L</i> transformer blocks (TBs), a multi-head attention pooling (MAP) layer, and a classification layer (CL), we select its <i>L</i>-th Transformer block for caching.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/overview_step2.png" class="center" width="70%">
+        <h2 class="subtitle has-text-centered">
+          Next, we feed images <b><i>x</i></b> to cache (frozen) features <b><i>f</i></b>.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/overview_step3.png" class="center" width="60%">
+        <h2 class="subtitle has-text-centered">
+          Finally, we use the cached features <b><i>f</i></b> to train a lightweight model on top. We investigate the effect of <u>frozen feature augmentation (FroFA)</u> applied on cached features in a few-shot setup. <b>We use the same setup for all FroFA experiments </b>.
+       </h2>
+     </div>
 </div>
-</body>
-</html>
+</section>
+<!-- End image carousel -->
+
+
+  <!-- : Stylistic FroFAs Work Surprisingly Well. -->
+    <!-- Overview on 18+2 augmentations -->
+<section class="section hero ">
+    <div class="container is-max-desktop">
+      <div class="column is-centered">
+      <h2 class="title is-3" style="text-align:center">Investigating 18+2 Frozen Feature Augmentations (FroFAs)</h2>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/all_augmentation_results.png" class="center" width="170%">
+        <h2 class="subtitle has-text-centered">
+          We first investigate <b>eighteen standard image augmentations in a frozen feature setup </b> using an L/16 ViT pretrained on JFT-3B. In these experiments, we cache features on few-shotted ILSVRC-2012 and train a lightweight model on top of augmented frozen features. We identify three strong augmentations: brightness, contrast, and posterize. Results for two additional augmentations are provided in the supplementary.
+        </h2>
+     </div>
+        </div>
+</div>
+</section>
+<!-- End Overview on 18 augmentations -->
+
+<!-- : We Identify Brightness c<sup>2</sup>FroFA as Our Best Working FroFA.-->
+    <!-- Overview on feature-wise augmentations -->
+<section class="section hero ">
+    <div class="container is-max-desktop">
+      <div class="column is-centered">
+      <h2 class="title is-3" style="text-align:center">A Closer Look on Brightness, Contrast, and Posterize FroFAs</h2>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/feature_wise_results.png" class="center" width="50%">
+        <h2 class="subtitle has-text-centered">
+          We apply brightness, contrast, and posterize in a <b>feature-wise manor (c or c<sup>2</sup>)</b>. Again, we use an L/16 ViT pretrained on JFT-3B, cache features on few-shotted ILSVRC-2012, and train a lightweight model on top of augmented frozen features. We identify <b>brightness c<sup>2</sup>FroFA as the best working FroFA</b>.
+        </h2>
+     </div>
+        </div>
+</div>
+</section>
+<!-- End overview on feature-wise augmentations -->
+
+
+<!-- Results carousel -->
+<section class="section hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 is-centered" style="text-align:center">Our Best Working FroFA Yields Strong Performance Across Architectures, Pretraining Datasets, and Few-Shot Datasets </h2>
+
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/jft3b_all_models_wd_combined.png" class="center" width="95%">
+        <h2 class="subtitle has-text-centered">
+        <b>Average top-1 accuracy gains on few-shotted ILSVRC-2012</b>, using frozen features from <b>JFT-3B ViTs</b>. We compare to a weight-decayed MAP (MAP<sup>wd</sup>) and L2-regularized linear probe baseline. Our method uses augmented frozen features while the baseline methods use unaltered frozen features. <b>In almost all 5- to 25-shot settings</b>, our method <b>matches or surpasses</b> both baselines.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/i21k_all_models_wd_combined.png" class="center" width="95%">
+        <h2 class="subtitle has-text-centered">
+       <b>Average top-1 accuracy gains on few-shotted ILSVRC-2012</b>, using frozen features from <b>ImageNet-21k ViTs</b>. We compare to a weight-decayed MAP (MAP<sup>wd</sup>) and L2-regularized linear probe baseline. Our method uses augmented frozen features while the baseline methods use unaltered frozen features. <b>In all 5- to 25-shot settings</b>, our method <b>matches or surpasses</b> both baselines.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/first_page_wd.png" class="center" width="45%">
+        <h2 class="subtitle has-text-centered">
+        <b>Average top-1 accuracy gains across seven few-shot test sets</b>, including, CIFAR100 and SUN397. We train on frozen features from an <b>L/16 model pretrained on JFT-3B</b> or an <b>L/16 image encoder of a WebLI-SigLIP pretrained vision-language model</b>. Our method uses augmented frozen features while the baseline methods use unaltered frozen features. On average, our method shows <b>superior performance across shots</b> for both settings.
+        </h2>
+     </div>
+</div>
+</section>
+<!-- End results carousel -->
+
+
+<!--&lt;!&ndash; Paper poster &ndash;&gt;-->
+<!--<section class="hero is-small is-light">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      <h2 class="title">Poster</h2>-->
+
+<!--      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">-->
+<!--          </iframe>-->
+<!--        -->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
+<!--&lt;!&ndash;End paper poster &ndash;&gt;-->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title" style="text-align:center">BibTeX </h2>
+      <pre><code>
+@InProceedings{Baer2024,
+  author    = {Andreas B\"ar and Neil Houlsby and Mostafa Dehghani and Manoj Kumar},
+  booktitle = {Proc.\ of CVPR},
+  title     = {{Frozen Feature Augmentation for Few-Shot Image Classification}},
+  month     = jun,
+  year      = {2024},
+  address   = {Seattle, WA, USA},
+}
+      </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content" style="text-align:center">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
